@@ -11,8 +11,10 @@ def dictionary(word):
         conferm = conferm.lower()
         if conferm == 'y':
             return data[get_close_matches(word,data.keys())[0]]
-        else:
+        elif conferm=='n':
             return 'pleade check your spealing and try again'
+        else:
+            return 'wrong input'
     else:
         return 'Please cheak your spealing'
 
