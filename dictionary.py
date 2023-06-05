@@ -16,11 +16,14 @@ def dictionary(word):
     else:
         return 'Please cheak your spealing'
 
-
-word = input('Enter a word: ')
-output = dictionary(word)
-if type(output) == list:
-    for op in output:
-        print(op)
-else:
-    print(output)
+while True:
+    word = input('Enter a word: ')
+    if word == '\\end':
+        break
+    else:
+        output = dictionary(word)
+        if type(output) == list:
+            for op in output:
+                print(op)
+        else:
+            print(output)
